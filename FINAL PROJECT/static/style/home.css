@@ -1,0 +1,55 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comforter&display=swap');
+body{
+    overflow: hidden;
+    height: 100vh;
+    font-family: 'Roboto Mono', monospace;
+    background: linear-gradient(89.89deg, #4152AD -0.71%, #FFFFFF -0.71%, #6AB7AD -0.7%, #D7D7D7 99.05%);
+    background: #BEC1D1;
+    font-family: 'Sora', sans-serif;
+}
+
+h1{
+    font-size:3em;
+    font-weight: medium;
+    color: rgb(48, 53, 53);
+}
+
+#no_login{
+    width: fit-content;
+    height: fit-content;    
+    margin-top: auto;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 150px;
+}
+
+.links{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    justify-content: space-around;
+    margin-top: 100px;
+}
+
+a{
+    text-decoration : underline !important;
+    font-size: 1.5em;
+    color: rgb(68, 74, 78);
+    text-decoration: solid;
+}
+
+#wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+    width: fit-content;
+}

@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comforter&display=swap');
+
+
+body{
+    font-family: 'Roboto Mono', monospace;
+    background: linear-gradient(89.89deg, #4152AD -0.71%, #FFFFFF -0.71%, #6AB7AD -0.7%, #D7D7D7 99.05%);
+    background: #BEC1D1;
+    font-family: 'Sora', sans-serif;
+}
+
+#wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 80vw;
+    margin: auto;
+    margin-top: 50px;
+}
+
+#add, .deck{
+    width: 200px;
+    height: 200px;
+    background: #1F5370;
+    margin: 10px;
+    position: relative;
+    box-shadow: 6px 4px 4px rgba(0, 0, 0, 0.25);
+    padding-right: 20px;
+}
+
+#addForm{
+    position: absolute;
+    background: green;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    visibility: hidden;
+    bottom: 0px;
+    background: #1F5370;
+    width: 100%;
+    padding: 20px;
+    transform: translateY(110%);
+    box-shadow: 6px 4px 4px rgba(0, 0, 0, 0.25);
+    z-index: 100;
+}
+
+#addForm input, #addForm label{
+    margin: 10px 0px;
+}
+
+#addForm label{
+    color: white;
+}
+
+#addForm input[type = 'submit']{
+    color: black;
+}
+
+
+#addForm input{
+    width: 100%;
+}
+
+.cross{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: white;
+}
+
+#add{
+    position: relative;
+}
+
+#add:hover{
+    cursor: pointer;
+}
+
+#add img{
+    width: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#decks{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    margin-top: 50px;
+    flex-wrap: wrap;
+    
+}
+
+
+#heading{
+    margin-top: 50px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+.deck_name{
+    color: white;
+    text-decoration:none;
+    text-align: left;
+    align-content: center;
+    padding-left: 15px;
+    padding-top: 15px;
+    font-size: 1.3em;
+    text-transform: uppercase;
+}
+
+a{
+    text-decoration: none;
+}
+
+.user_name{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: rgb(179, 179, 179);
+    font-size: 0.9em;
+}
+
+.modified{
+    font-size: 0.8em;
+    color: rgb(172, 172, 172);
+    padding-left: 15px;
+    margin-top: 10px;
+}
+
+
+.score_val{
+    font-size: 0.9em;
+    color: rgb(211, 211, 211);
+    padding-left: 15px;
+    margin-top: 10px;
+}
+
+#logout{
+    position: absolute;
+    width: fit-content;
+    top: 30px;
+    right: 30px;
+    color: black;
+    font-size: 1.2em;
+}
+
+#logout span{
+    margin-right: 20px;
+}
+
+#logout a{
+    margin-left: 20px;
+    color: black;
+    text-decoration: underline;
+}
+
+.deck-wrapper{
+    position: relative;
+}
+
+.delete{
+    position: absolute;
+    top: 15px;
+    right: 22px;
+    color: rgb(255, 255, 255);
+    font-size: 1.5em;
+    z-index: 100;
+}
+
+.delete:hover{
+    cursor: pointer;
+}
+
+
+

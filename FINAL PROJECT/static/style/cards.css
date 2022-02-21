@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comforter&display=swap');
+
+
+body{
+    font-family: 'Roboto Mono', monospace;
+    background: linear-gradient(89.89deg, #4152AD -0.71%, #FFFFFF -0.71%, #6AB7AD -0.7%, #D7D7D7 99.05%);
+    background: #BEC1D1;
+    font-family: 'Sora', sans-serif;
+}
+
+
+
+#add_card form{
+    display: flex;
+    margin: 30px;
+    background: #1F5370;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50vw;
+    justify-content: space-evenly;
+}
+
+#heading:hover{
+    cursor: pointer;
+}
+
+#add_card input{
+    outline: none;
+    font-size: 1.2em;
+}
+
+.form{
+    display: flex;
+    flex-direction: row;
+    visibility: hidden;
+    
+}
+
+.cross{
+    align-content: center;
+    margin: auto;
+    font-size: 1.5em;
+}
+
+#add_card label{
+    font-family: 'Roboto Mono', monospace;
+    color: white;
+    font-size: 1.2em;
+}
+
+
+
+.card{
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    position: absolute;
+    background: white;
+    visibility: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -80%);
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    align-content: center;
+    flex-direction: column;
+    padding: 0px;
+    z-index: 1;
+
+}
+
+.card[data-state = 'back']{
+    background: rgb(255, 161, 161);
+}
+
+#cards:hover{
+    cursor: alias;
+}
+
+.front{
+    text-align: center;
+    font-size: 2em;
+    
+}
+
+.card[data-num = '1']{
+    visibility: visible;
+}
+
+
+.score{
+    visibility: hidden;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    /* justify-content: flex-end; */
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    z-index: +100;
+}
+
+.score button{
+    height: 50px;
+    border: 1px solid rgb(209, 209, 209);
+    outline: none;
+    margin: 0px;
+    font-size: 1.1em;
+    color: rgb(117, 117, 117);
+}
+
+.back{
+    visibility: hidden;
+}
+
+
+
+
+
+
+
+#add_card{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#add_card form:hover{
+    cursor: default;
+}
+
+#heading{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    margin: auto;
+    width: fit-content;
+}
+
+#heading div{
+    margin: auto;
+    margin-left: 20px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+#add_card img{
+    width: 40px;
+}
+
+.rotate{
+    transform: translate(-50% , -80%) rotateY(180deg);
+    transition: 0.5s ease-in-out;
+}
+
+.num{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+
+.instruction{
+    position: absolute;
+    bottom: 20px;
+    right: 50%;
+    transform: translateX(+50%);
+    font-family: 'Roboto Mono', monospace;
+    font-size: 0.7em;
+}
+
+.selected{
+    background: #C4C4C4 !important;
+}
+
+.reviewed{
+    background: #E7E7E7;
+    color: #767676 !important;
+}
+
+#nocards{
+    text-align: center;
+    margin-top: 250px;
+    font-size: 3em;
+}
+
+#logout{
+    position: absolute;
+    width: fit-content;
+    top: 30px;
+    right: 30px;
+    color: black;
+    font-size: 1.2em;
+}
+
+input[type="submit"]:hover{
+    cursor: pointer;
+}
+
+.cross:hover{
+    cursor: pointer;
+}
+
+#back a{
+    color: black;
+    font-size: 1.2em;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+#logout span{
+    margin-right: 20px;
+}
+
+#logout a{
+    margin-left: 20px;
+    color: black;
+    text-decoration: underline;
+}
+
+.deactivate{
+    color: rgb(146, 146, 146);
+}
+
+
+
+#prev:hover, #next:hover {
+    cursor: pointer;
+}
+
+#controls{
+    font-size: 3em;
+    width: 50vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-200%);
+    z-index: -1;
+
+}
+
+#progress{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%);
+}
+
+.dot{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: black 1px solid;
+    margin: 5px;
+}
+
+.current{
+    background: black !important;
+}

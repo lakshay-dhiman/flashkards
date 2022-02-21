@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/cards.css') }}">
+
+</head>
+<body>
+    <div id="back"><a href="/decks">DECKS&#8630;</a></div>
+    <div id="logout"><span>{{current_user.username}}</span>||<a href="../api/user/logout" >LOGOUT</a></div>
+    <a href="../api/user/logout" id="logout">LOGOUT</a>
+    <!-- the cards -->
+    <div id="cards">
+        {% if cards|length == 0 %}
+            <h1 id="nocards">NO CARDS ADDED YET</h1>
+        {% else %}
+        {% for card in cards %}
+
+        <div data-num={{card[0]}} data-state='front' data-front='{{card[1]}}' data-back='{{card[2]}}' class="card" data-voted='false'>
+            <div class="front">{{card[1]}}</div>
+            <div class="num">{{card[0]}}</div>
+            <div class="instruction">Click to flip</div>
+            <div class="score">
+                <button class="score_val" data-score="1">easy</button>
+                <button class="score_val" data-score='2'>medium</button>
+                <button class="score_val" data-score="3">hard</button>
+            </div>
+        </div>
+        {%endfor%}
+        
+        <div id="controls">            
+            <div id="prev">&larr;</div>
+            <div id="next">&rarr;</div>
+        </div>
+
+        <div id="progress">
+
+        </div>
+        {% endif%}
+    
+    {% if current_user.id == user_id %}
+
+    <!-- option to add cards -->
+    <div id="add_card">
+        <div id="heading">
+            <img src="{{ url_for('static', filename='assets/add.svg') }}" alt="">
+            <div>Add More cards</div>
+        </div>
+        <div class="form">
+        <form id="add_card_form">
+            <div>
+                <label for="front">Front : </label>
+                <input type="text" name="front" id="front">
+            </div>
+            <div>
+                <label for="back">Back : </label>
+                <input type="text" name="back" id="back">
+            </div>
+            <input type="hidden" name="deck_id" value="{{deck_id}}">
+            <input type="hidden" name="user_id" value="{{current_user.id}}">
+            <div><input type="submit" id="add_card_submit"></div>
+            
+        </form>
+        <div class="cross">&#x2716;</div>
+        </div>
+    </div>
+    {% endif %}
+
+
+
+    
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="{{ url_for('static', filename='js/cards.js') }}"></script>
+</html>

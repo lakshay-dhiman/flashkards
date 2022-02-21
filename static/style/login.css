@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comforter&display=swap');
+body{
+    height: 100vh;
+    font-family: 'Roboto Mono', monospace;
+    background: linear-gradient(89.89deg, #4152AD -0.71%, #FFFFFF -0.71%, #6AB7AD -0.7%, #D7D7D7 99.05%);
+    background: #BEC1D1;
+    font-family: 'Sora', sans-serif;
+}
+
+#wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+    width: fit-content;
+    margin-top: 100px;
+}
+
+#loginform{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin-top: 50px;
+    position: relative;
+}
+
+input{
+    outline: none;
+    border: black 1px solid;
+    border-radius: 5px;
+    height: 30px;
+    margin-bottom: 30px;
+    padding: 10px;
+}
+input, label{
+    margin-top: 10px ;
+}
+
+input[type = "submit"]{
+    margin: auto;
+    margin-top: 20px;
+    width: 100%;
+    background: transparent;
+    outline: none;
+    border: none;
+    color: black;
+    font-size: 1.5em;
+    text-align: right;
+    padding: 0px;
+}
+
+#error{
+    margin-top: 50px;
+}
+
+.new_user{
+    text-align: center!important;
+    margin-top: 30px;
+    text-decoration: underline!important;
+    color: black;
+}
